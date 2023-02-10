@@ -1,0 +1,42 @@
+.clones-2 {
+  height: 50px;
+  width: calc(0.866 * 50px);
+  display: grid;
+  background: conic-gradient(
+    from -121deg at right,
+    #f0000000,
+    #e41414 1deg 60deg,
+    #0000 61deg
+  );
+  animation: cl2 2s infinite linear;
+  transform-origin: 33% 50%;
+}
+.clones-2:before,
+.clones-2:after {
+  content: "";
+  grid-area: 1/1;
+  background: conic-gradient(
+    from -121deg at right,
+    #0000,
+    #ffda0b 1deg 60deg,
+    #0000 61deg
+  );
+  transform-origin: inherit;
+  animation: inherit;
+}
+
+.clones-2:after {
+  background: conic-gradient(
+    from -121deg at right,
+    #0000,
+    #eb6f5a 1deg 60deg,
+    #f1696900 61deg
+  );
+  animation-duration: 3s;
+}
+
+@keyframes cl2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
